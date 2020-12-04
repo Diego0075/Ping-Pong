@@ -31,14 +31,33 @@
         this.vely *= -1;
     
        
+        //Colisiones Barra izq
+         if(this.posx >=jugadorizq.posx+this.radio&& this.posx-this.radio <=jugadorizq.posx+jugadorizq.ancho&& this.posy+this.radio>=jugadorizq.posy && this.posy-this.radio<=(jugadorizq.posy+jugadorizq.alto)){
+           console.log("perfes");
+           
+          this.posx= jugadorizq.posx+jugadorizq.ancho+this.radio;
 
-        // if(this.posx >=barraizq.posx.animVal.value-this.radio && this.posx <=barraizq.posx.animVal.value+barraizq.width.animVal.value && this.posy+this.radio>=barraizq.posy.animVal.value && this.posy-this.radio<=(barraizq.posy.animVal.value+barraizq.height.animVal.value)){
-          // this.velx *= -1;
-          // if(this.velx>=-20){
-              // this.velx  -=2;
-          // }
+           this.velx *= -1; //Controlador de velocidad
+           if(this.velx>=-15){
+               this.velx  +=3;
+               
+           }
         }
-      
+        
+        //Colisiones Barra dcha
+
+        if(this.posx >=jugadordcha.posx-this.radio && this.posx<=jugadordcha.posx-this.radio+jugadordcha.ancho && this.posy+this.radio>=jugadordcha.posy && this.posy-this.radio<=(jugadordcha.posy+jugadordcha.alto)){
+          console.log("perfes2")
+
+          this.posx = jugadordcha.posx-this.radio-1;
+
+          this.velx *= -1; //Controlador de velocidad
+          if(this.velx >= 15){
+          this.velx  -=3;
+          }
+        }
+
+    }
     
 
 
@@ -65,15 +84,15 @@
 
     moverup(){
       if(this.posy>0){
-      this.posy-=5;
-      console.log(this.posy);
+      this.posy-=10;
+      // console.log(this.posy);
       }
     }
 
     moverdown(){
       if(this.posy<425){
-      this.posy+=5;
-      console.log(this.posy);
+      this.posy+=10;
+      // console.log(this.posy);
       }
       
     }
@@ -123,15 +142,15 @@
 
       moverup(){
         if(this.posy>0){
-        this.posy-=5;
-        console.log(this.posy);
+        this.posy-=10;
+        // console.log(this.posy);
         }
       }
   
       moverdown(){
         if(this.posy<425){
-        this.posy+=5;
-        console.log(this.posy);
+        this.posy+=10;
+        // console.log(this.posy);
         }
         
       }
