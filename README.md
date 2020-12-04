@@ -11,7 +11,12 @@ Problema con velocidad de Palas y pelota (Arreglado)
 
 Falta por arreglar:
 
-   Problemas con el rebote de la pelota en ambas barras
+   Problemas con el rebote de la pelota en ambas barras // Corregido 04/12/2020
+  
+  -------------------------------Funciones Esteticas----------------------
   
   
-   Creación de Marcador
+   Creación de Marcador y Reset (En Desarrollo)
+
+
+El juego posee bordes en el svg, se pueden quitar pero sería solo a 1 partida ya que se perdería la bola y habría que actualizar la página para volver a jugar
